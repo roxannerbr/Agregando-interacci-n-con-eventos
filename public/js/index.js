@@ -28,7 +28,18 @@ window.onload = function(){
             destacado[i].classList.add('destacadoImpar');
         }
     }
-    
 
-    container.style.display = 'block';
+    let $ = (e) => document.querySelector(e)
+
+    let logo= $('figure')
+    let menu= $('#menu')
+
+    logo.addEventListener('click',(e)=>{
+        $('#menu').classList.toggle('mostrar')
+    })
+
+    menu.addEventListener('mouseleave', (e)=>{
+        menu.classList.tog('mostrar')
+    })
+
 }
